@@ -786,6 +786,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Max 2014|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Max 2014|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Max 6|x64'">
     <Link>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -1185,16 +1188,17 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
       <TargetEnvironment>X64</TargetEnvironment>
     </Midl>
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher;D:\niflib;D:\niflib\include;D:\niflib\NvTriStrip;D:\niflib\TriStripper;D:\niflib\qhull\src;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\include;D:\max_nif_plugin-2010\NifCommon</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher;D:\Repo\niflib;D:\Repo\niflib\include;D:\Repo\niflib\NvTriStrip;D:\Repo\niflib\TriStripper;D:\Repo\niflib\qhull\src;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\include;D:\Repo\Nif-Plugin\NifCommon</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;USE_NIFLIB_TEMPLATE_HELPERS;NDEBUG;_WINDOWS;_USRDLL;_WINDLL;_UNICODE;_SCL_SECURE_NO_WARNINGS;UNICODE</PreprocessorDefinitions>
       <CompileAsManaged>
       </CompileAsManaged>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <MinimalRebuild>true</MinimalRebuild>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher\Lib\x64\Release - Morpher;D:\niflib\lib;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\lib\x64\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher\Lib\x64\Release - Morpher;D:\Repo\niflib\lib;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\lib\x64\Release</AdditionalLibraryDirectories>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
@@ -1210,7 +1214,7 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
       <TargetEnvironment>X64</TargetEnvironment>
     </Midl>
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher;D:\niflib;D:\niflib\include;D:\niflib\NvTriStrip;D:\niflib\TriStripper;D:\niflib\qhull\src;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\include;D:\max_nif_plugin-2010\NifCommon</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher;D:\Repo\niflib;D:\Repo\niflib\include;D:\Repo\niflib\NvTriStrip;D:\Repo\niflib\TriStripper;D:\Repo\niflib\qhull\src;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\include;D:\Repo\Nif-Plugin\NifCommon</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;USE_NIFLIB_TEMPLATE_HELPERS;_DEBUG;_WINDOWS;_USRDLL;_WINDLL;_UNICODE;_SCL_SECURE_NO_WARNINGS;UNICODE;_USE_MATH_DEFINES</PreprocessorDefinitions>
       <CompileAsManaged>
       </CompileAsManaged>
@@ -1222,7 +1226,7 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
       <StringPooling />
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher\Lib\x64\Release - Morpher;D:\niflib\lib;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\lib\x64\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher\Lib\x64\Release - Morpher;D:\Repo\niflib\lib;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\lib\x64\Release</AdditionalLibraryDirectories>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
