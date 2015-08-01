@@ -769,7 +769,7 @@
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug - Max x64|Win32'">false</PreBuildEventUseInBuild>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release - Max x64|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Max 2014|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Max 2014|x64'">D:\Karthik\Programs\Autodesk\3ds Max 2014\plugins</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Max 2014|x64'">D:\Karthik\Programs\Autodesk\3ds Max 2014\plugins\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug - Max x64|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release - Max x64|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Max 2014|x64'">$(Platform)\$(Configuration)\</IntDir>

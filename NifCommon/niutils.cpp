@@ -317,6 +317,7 @@ std::wstring ExpandEnvironment(const std::wstring& src)
 	TCHAR* pbuf = new TCHAR[Size + 2];
 	pbuf[0] = 0;
 	ExpandEnvironmentStrings(src.c_str(), pbuf, Size + 2);
+	std::wstring finished = std::wstring(pbuf);
 	return std::wstring(pbuf);
 }
 
@@ -401,13 +402,13 @@ std::wstring GetIndirectValue(LPCWSTR path)
 	LPWSTR p = STRDUPA(path);
 	Trim(p);
 
-	if (*p == _T('p'))
+	if (*p == _T('['))
 	{
 		LPWSTR end = wcschr(++p, ']');
 		if (end != NULL)
 		{
 			*end++ = 0;
-			// Advance unsafetly past unnecesary qualifiers
+			// Advance unsafely past unnecesary qualifiers
 			LPWSTR valueName = end;
 			end = valueName + wcslen(end) - 1;
 			if (*valueName == '=') ++valueName;
@@ -425,11 +426,11 @@ std::wstring GetIndirectValue(LPCWSTR path)
 				if (hRoot != 0)
 				{
 					HKEY hKey = NULL;
-					if (ERROR_SUCCESS == RegOpenKeyEx((HKEY)hRoot, keyEnd, 0, KEY_READ, &hKey))
+					if (ERROR_SUCCESS == RegOpenKeyExW((HKEY)hRoot, keyEnd, 0, KEY_READ, &hKey))
 					{
 						BYTE buffer[MAX_PATH * sizeof(*path)];
 						DWORD dwLen = _countof(buffer);
-						if (ERROR_SUCCESS == RegQueryValueEx(hKey, valueName, NULL, NULL, (LPBYTE)buffer, &dwLen))
+						if (ERROR_SUCCESS == RegQueryValueExW(hKey, valueName, NULL, NULL, (LPBYTE)buffer, &dwLen))
 							value = (TCHAR*)buffer;
 						RegCloseKey(hKey);
 					}
