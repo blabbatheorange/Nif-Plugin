@@ -1608,8 +1608,6 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
     <None Include="..\AUTHORS.TXT" />
     <None Include="..\NifProps\Modifier\bmp00003.bmp" />
     <None Include="..\CHANGELOG.TXT" />
-    <None Include="..\NifProps\Shader\dmtlbut.bmp" />
-    <None Include="..\NifProps\Shader\dmtlmsk.bmp" />
     <None Include="..\LICENSE.TXT" />
     <None Include="..\README.TXT" />
     <None Include="..\TODO.txt" />
