@@ -346,9 +346,9 @@ NiTriBasedGeomRef Exporter::makeMesh(NiNodeRef &parent, Mtl *mtl, FaceGroup &grp
 	NiTriBasedGeomRef shape;
 	NiTriBasedGeomDataRef data;
 
-   //if (Exporter::mFixNormals) {
-   //   FixNormals(grp.faces, grp.verts, grp.vnorms);
-   //}
+    /*if (Exporter::mFixNormals) {
+       FixNormals(grp.faces, grp.verts, grp.vnorms);
+    }*/
 
 	if (exportStrips) {
       shape = new NiTriStrips();

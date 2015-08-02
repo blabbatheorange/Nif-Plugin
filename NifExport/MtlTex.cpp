@@ -411,7 +411,7 @@ bool Exporter::makeTextureDesc(BitmapTex *bmTex, TexDesc& td, NiTriBasedGeomData
 
 void Exporter::makeMaterial(NiAVObjectRef &parent, Mtl *mtl)
 {
-	// Fill-in using the Civ4 Shader if available
+	// Fill-in using the Niftools Shader if available
 	bool done = exportNiftoolsShader(parent, mtl);
 	if (done)
 		return;
@@ -891,14 +891,20 @@ bool Exporter::exportNiftoolsShader(NiAVObjectRef parent, Mtl* mtl)
 
             texset->SetTextures(textures);
 
-            // shader must be first, alpha can be second
+			// Old incorrect code, did not correctly link shader to the meshes.
+            /*shader must be first, alpha can be second
             NiPropertyRef prop = DynamicCast<NiProperty>(texProp);
             vector<NiPropertyRef> properties = parent->GetProperties();
-            /*parent->ClearProperties();*/
-            parent->AddProperty(prop);
-            if (properties.size() > 0)
-               parent->AddProperty(properties[0]);
-               
+            parent->ClearProperties();
+			if (properties.size() > 0)
+				parent->AddProperty(properties[0]);
+			parent->AddProperty(prop);*/
+
+			// New code to fix parenting of BSLighting branches to the geometry, specific to skyrim only
+			// TODO: Add in checks for an existing shader or figure out what the other Bethesda specific node goes into this slot.
+			NiGeometryRef temp = DynamicCast<NiGeometry>(parent);
+			NiPropertyRef prop = DynamicCast<NiProperty>(texProp);
+			temp->SetBSProperty(0, prop);
          }
          useDefaultShader = false;
       }

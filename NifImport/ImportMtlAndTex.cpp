@@ -282,7 +282,7 @@ Texmap* NifImporter::CreateTexture(const std::wstring& filename)
 StdMat2 *NifImporter::ImportMaterialAndTextures(ImpNode *node, NiAVObjectRef avObject)
 {
 	// Texture
-	NiGeometryRef geoprop=DynamicCast<NiGeometry>(avObject);
+	NiGeometryRef geoprop = DynamicCast<NiGeometry>(avObject);
 	vector<NiPropertyRef> props = geoprop->GetProperties();
 	NiMaterialPropertyRef matRef = SelectFirstObjectOfType<NiMaterialProperty>(props);
 	array<2, NiPropertyRef> BSProps = geoprop->GetBSProperties();
