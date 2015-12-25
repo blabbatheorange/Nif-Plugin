@@ -659,8 +659,8 @@ bool AnimationExport::doExport(NiControllerManagerRef mgr, INode *node)
 
                            NiTextKeyExtraDataRef textKeyData = new NiTextKeyExtraData();
                            curSeq->SetTextKey(textKeyData);
-                           curSeq->SetTextKeys(textKeyData);										// Causes Linker Error
-						   curSeq->SetTextKeysName(curSeq->GetTargetName());						// Causes Linker Error
+                           curSeq->SetTextKeys(textKeyData);
+						   curSeq->SetTextKeysName(curSeq->GetTargetName());
                            textKeyData->SetKeys(textKeys);
                            textKeys.clear();
                            curSeq = NULL;

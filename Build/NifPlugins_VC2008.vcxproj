@@ -787,7 +787,7 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Max 2014|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Max 6|x64'">
     <Link>
@@ -1189,7 +1189,7 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
     </Midl>
     <ClCompile>
       <AdditionalIncludeDirectories>D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\samples\modifiers\morpher;D:\Repo\niflib;D:\Repo\niflib\include;D:\Repo\niflib\NvTriStrip;D:\Repo\niflib\TriStripper;D:\Repo\niflib\qhull\src;D:\Karthik\Programs\Autodesk\3ds Max 2014 SDK\maxsdk\include;D:\Repo\Nif-Plugin\NifCommon</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;USE_NIFLIB_TEMPLATE_HELPERS;NDEBUG;_WINDOWS;_USRDLL;_WINDLL;_UNICODE;_SCL_SECURE_NO_WARNINGS;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN64;_WIN64;USE_NIFLIB_TEMPLATE_HELPERS;NDEBUG;_WINDOWS;_USRDLL;_WINDLL;_UNICODE;_SCL_SECURE_NO_WARNINGS;UNICODE</PreprocessorDefinitions>
       <CompileAsManaged>
       </CompileAsManaged>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -1205,9 +1205,12 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
       <TargetMachine>MachineX64</TargetMachine>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;shlwapi.lib;core.lib;geom.lib;gfx.lib;mesh.lib;maxutil.lib;maxscrpt.lib;paramblk2.lib;bmm.lib;mnmath.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;niflib_dll.lib;Morpher.lib</AdditionalDependencies>
       <ImportLibrary>$(IntDir)$(ProjectName).lib</ImportLibrary>
-      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
     </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Max 2014|x64'">
     <Midl>
@@ -1512,7 +1515,7 @@ xcopy /D /Y /I "$(TargetPath)" "$(OutDir)"
     <ClCompile Include="..\NifCommon\Hyperlinks.cpp" />
     <ClCompile Include="..\NifCommon\NifGui.cpp" />
     <ClCompile Include="..\NifCommon\NifPlugins.cpp" />
-    <ClCompile Include="..\NifCommon\NifQHull.cpp" />
+    <ClCompile Include="..\NifCommon\CollisionHull.cpp" />
     <ClCompile Include="..\NifCommon\nimorph.cpp" />
     <ClCompile Include="..\NifCommon\niutils.cpp" />
     <ClCompile Include="..\NifPlugins\DllEntry.cpp">

@@ -911,8 +911,9 @@ bool Exporter::exportNiftoolsShader(NiAVObjectRef parent, Mtl* mtl)
 		else if (IsFallout3())
 		{
 			NiObjectRef root;
-			if (CustomShader != NULL && wcslen(CustomShader) != 0)
-				root = Niflib::ObjectRegistry::CreateObject(narrow(CustomShader));
+			// ASK FIGMENT ABOUT THIS!
+			/*if (CustomShader != NULL && wcslen(CustomShader) != 0)
+				root = Niflib::ObjectRegistry::CreateObject(narrow(CustomShader));*/
 
 			if (root == NULL) {
 				if (IsSkyrim()) {

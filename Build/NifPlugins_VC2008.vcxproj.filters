@@ -296,9 +296,6 @@
     <ClCompile Include="..\NifCommon\NifPlugins.cpp">
       <Filter>NifCommon\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\NifCommon\NifQHull.cpp">
-      <Filter>NifCommon\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\NifCommon\nimorph.cpp">
       <Filter>NifCommon\Source Files</Filter>
     </ClCompile>
@@ -348,6 +345,9 @@
       <Filter>NifImport\Importer</Filter>
     </ClCompile>
     <ClCompile Include="..\NifCommon\BodyTri.cpp">
+      <Filter>NifCommon\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\NifCommon\CollisionHull.cpp">
       <Filter>NifCommon\Source Files</Filter>
     </ClCompile>
   </ItemGroup>

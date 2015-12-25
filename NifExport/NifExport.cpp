@@ -500,7 +500,11 @@ int NifExport::DoExportInternal(const TCHAR *name, ExpInterface *ei, Interface *
 
 	Exporter exp(i, appSettings);
 	
-	Ref<NiNode> root = DynamicCast<NiNode>(Niflib::ObjectRegistry::CreateObject(narrow(Exporter::mRootType)));
+	// Figment Error code?
+	// Ref<NiNode> root = DynamicCast<NiNode>(Niflib::ObjectRegistry::CreateObject(narrow(Exporter::mRootType)));
+
+	// Temporary "fix"
+	Ref<NiNode> root = NULL;
 	if (root == NULL)
 		root = new NiNode();
 	if ( exp.IsFallout3() || exp.IsSkyrim() )

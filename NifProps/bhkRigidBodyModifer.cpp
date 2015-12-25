@@ -749,9 +749,9 @@ void bhkRigidBodyModifier::BuildColPackedStrips(Mesh& mesh)
 
 void bhkRigidBodyModifier::BuildColConvex(Mesh& mesh)
 {
-	extern void compute_convex_hull(Mesh& mesh, Mesh& outmesh);
+	extern void get_convex_hull(Mesh& mesh, Mesh& outmesh);
 
-	compute_convex_hull(mesh, mesh);
+	get_convex_hull(mesh, mesh);
 }
 
 void bhkRigidBodyModifier::BuildColOBB(Mesh& mesh)

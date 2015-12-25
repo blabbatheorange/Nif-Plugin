@@ -31,7 +31,7 @@ HISTORY:
 #define _countof(x) (sizeof(x)/sizeof((x)[0]))
 #endif
 
-extern void compute_convex_hull(Mesh& mesh, Mesh& outmesh);
+extern void get_convex_hull(Mesh& mesh, Mesh& outmesh);
 
 Class_ID BHKPROXYOBJECT_CLASS_ID = Class_ID(0x3f087788, BHKRIGIDBODYCLASS_DESC.PartB());
 class ProxyPickObjectMode;
@@ -870,7 +870,7 @@ void bhkProxyObject::BuildColConvex()
 			}
 		}
 	}
-	compute_convex_hull(proxyMesh, proxyMesh);
+	get_convex_hull(proxyMesh, proxyMesh);
 
 	BuildOptimize(proxyMesh);
 
